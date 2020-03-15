@@ -1,0 +1,34 @@
+
+
+.mn h3{
+   font-size: 40px;
+}
+
+.fi{
+    max-width: 800px;
+    max-height: auto;
+}
+
+.cw{
+    padding-left: 2rem;
+    margin-left: 1rem;
+}
+
+.mf{
+    float: left;
+}
+.mi{
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+}
+.mi .box{
+    margin-bottom: 2rem;
+}
+
+.ctt{
+    font-size: 18px;
+    font-weight: bolder;
+}
+.peekaboo{
+    display: none;
+}

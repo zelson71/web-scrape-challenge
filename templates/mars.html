@@ -1,0 +1,49 @@
+<div class="mi">
+    <div class="box">
+        <h3 class="mn">Latest Mars Data</h3>
+        <h5 class="mn">{{ mars_scrape.news_title }}</h5>
+        <p>{{ mars_scrape.news_paragraph }} </p>
+    </div>
+    <div class="row">
+        <div class="col-md-7 col-sm-12">
+            <h3>Featured Mars Image</h3>
+            <img class="fi" src=" {{  mars_scrape.featured_image_url }}" alt="">
+        </div>
+        <div class="col-md-4 col-sm-12 cw">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Current Weather on Mars</h5>
+                    <p class="card-text"> {{ mars_scrape. mars_weather }}</p>
+                </div>
+
+                <div class="mf">
+                    <h2>Mars Facts</h2>
+                    <div class="mf">
+                        {{mars_scrape.data|safe }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="hemi">
+    <h4 class="hemi">Mars Hemispheres</h4>
+    <div class="card-deck">
+        <hr>
+        <div class="col-md-12">
+            <div class="row">
+                {% for item in mars_scrape.hemi_images %}
+                <div class="col-md-6">
+                    <div class="card">
+                        <img src=" {{ item.img_url }} " alt="crap" class="card-img-top">
+                        <div class="card-body">
+                            <p class="card-text ctt"> {{ item.title }} </p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
